@@ -1,0 +1,5 @@
+<project default="main">
+    <target name="main">
+        <epsilon.eol src="program.eol" />
+    </target>
+</project>
