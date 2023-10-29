@@ -1,0 +1,17 @@
+name: 'Run Ant build in Epsilon CI image'
+descriptions: 'Runs an Ant buildfile inside an Eclipse Modelling installation with Epsilon included'
+inputs:
+  build-file:
+    description: 'Relative path to the Ant buildfile'
+    required: true
+    default: 'build.xml'
+  target:
+    description: 'Name of the Ant target to be executed'
+    required: true
+    default: 'main'
+runs:
+  using: 'docker'
+  image: 'docker://registry.gitlab.com/committed-consulting/mde-devops/epsilon-ci-container:latest'
+  args:
+    - /github/workspace/${{ inputs.build-file }}
+    - ${{ inputs.target }}
