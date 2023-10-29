@@ -2,7 +2,7 @@
 
 Github Action for the Committed Consulting [Epsilon CI Docker image](https://gitlab.com/committed-consulting/mde-devops/epsilon-ci-container/).
 
-This action runs an Ant buildfile inside a Docker image based on the Eclipse Modelling distribution, with [Eclipse Epsilon](https://eclipse.org/epsilon) installed.
+This action runs an Ant buildfile inside an [Eclipse Modelling](https://eclipse.dev/modeling/) distribution, with [Eclipse Epsilon](https://eclipse.org/epsilon) installed.
 
 ## Inputs
 
@@ -20,4 +20,9 @@ This action has no outputs at the moment.
 
 ## Example usage
 
-To be documented.
+```yaml
+uses: agarciadom/epsilon-ci-action@v1
+with:
+  build-file: build.xml
+  target: main
+```
