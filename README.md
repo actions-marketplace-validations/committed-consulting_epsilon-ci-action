@@ -21,7 +21,7 @@ This action has no outputs at the moment.
 ## Example usage
 
 ```yaml
-uses: agarciadom/epsilon-ci-action@v1
+uses: committed-consulting/epsilon-ci-action@v1
 with:
   build-file: build.xml
   target: main
